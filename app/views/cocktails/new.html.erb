@@ -1,9 +1,28 @@
-<h1>New cocktail</h1>
 
-<%= simple_form_for @cocktail do |f| %>
+<div class="container mt-5 align-items-center" style="width: 50%" id="card-dose-form">
+  <div class="card text-white bg-dark border border-3 border-dark rounded bg-warning mb-3">
+    <div class="card-header" style="font-size: 30px; color: orange">Create your cocktail</div>
+    <div class="card-body">
+      
+      <%= simple_form_for :search do |f| %>
   
-  <%= f.input :img_url %>  
-  <%= f.input :name %>
-  <%= link_to 'Cancel', cocktails_path, class: 'btn btn-secondary' %> or
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+        <%= f.input :img_url %>  
+        <%= f.input :name %>
+        <%= f.submit class: 'btn btn-warning' %> or
+        <%= link_to 'Cancel', cocktails_path, class: 'btn btn-warning' %> 
+        
+      <% end %>
+   
+    </div>
+  </div>
+</div>
+
+   <%# <%= simple_form_for [@cocktail, @dose] do |f| %>
+      
+
+      <%# <%= f.input :description %>
+      <%# <%= f.association :ingredient %> %>
+      <%# <%= f.submit 'Add ingredient', class: 'btn btn-warning' %> or %>
+      <%# <%= link_to 'Cancel', cocktail_path(@cocktail), class: 'btn btn-warning'  %> %> %>
+      
+      <%# <% end %> %> %>

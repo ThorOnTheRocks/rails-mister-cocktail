@@ -1,4 +1,4 @@
-<%= simple_form_for [ @cocktail, @review ] do |f| %>
-  <%= f.input :content %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<%= simple_form_for [ @cocktail, @doses] do |f| %>
+  <%= f.input :description %>
+  <%= f.submit "Add cocktail", class: "btn btn-primary" %>
 <% end %>

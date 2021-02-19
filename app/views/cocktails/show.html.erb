@@ -15,17 +15,17 @@
       <li>
         <%= dose.description %> of <%= dose.ingredient.name %>
         <small>
-          <%= link_to dose_path(dose), class: 'text-danger', data: { delete: "delete-#{dose.id}" } do %>
+          <%= link_to dose_path(dose), class: 'text-warning', method: :delete, data: { delete: "delete-#{dose.id}" } do %>
             <i class="fas fa-backspace"></i>
           <% end %>
         
 
-          <%= link_to '', dose_path(dose), rel: 'nofollow', method: :delete, class: 'hidden', id: "delete-#{dose.id}" %>
+          
         </small>
       </li>
     <% end %>
   </ul>
-  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-secondary btn-sm' %>
+  <%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-warning btn-sm' %>
 <% end %>
 
   </div>

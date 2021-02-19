@@ -1,18 +1,26 @@
-<% @cocktails.each do |cocktail| %>
-	<div class="container mt-5">
-			<div class="row row-cols-4">
+<div class="container my-4">
+	<div class="row">
+	<% @cocktails.each do |cocktail| %>
+		
+		
+			<div class="d-flex align-items-stretch col-sm mb-4">
 				<div class="card-group">
-					<div class="card">
-					<%= image_tag cocktail.img_url %>
-					<div class="card-body">
-						<h3><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h3>
-						<h5>(<%= cocktail.doses.count %> ingredients)</h5>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">Last updated 3 mins ago</small>
+					<div class="card card-index border text-white bg-dark mb-3 border-5 border-warning rounded-3">
+					<%= image_tag cocktail.img_url, class: "img-card-index"	%>
+						<div class="card-body">
+							<h3 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h3>
+							<h5 class="card-text">(<%= cocktail.doses.count %> ingredients)</h5>
+						</div>
+						<div class="card-footer">
+							<% time = Time.now %>
+							<p>Created on: <%= time.strftime("%d/%m/%Y")   %></p>  
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		
+		
+
+	<% end %>
 	</div>
-<% end %>
+</div>

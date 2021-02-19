@@ -1,11 +1,18 @@
-<h1>Add new ingredient</h1>
 
-<p>Insert the ingredient details to add to <%= @cocktail.name %></p>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  
+<div class="container mt-5 align-items-center" style="width: 50%" id="card-dose-form">
+  <div class="card text-white bg-dark border border-3 border-dark rounded bg-warning mb-3">
+    <div class="card-header" style="font-size: 30px; color: orange">Choose your ingredients</div>
+    <div class="card-body">
+      <p class="card-title" style="font-size: 20px; color: orange">Insert the ingredient details to add to <%= @cocktail.name %></p>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      
 
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= link_to 'Cancel', cocktail_path(@cocktail), class: 'btn btn-secondary' %> or
-  <%= f.submit 'Add ingredient', class: 'btn btn-primary' %>
-<% end %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit 'Add ingredient', class: 'btn btn-warning' %> or
+      <%= link_to 'Cancel', cocktail_path(@cocktail), class: 'btn btn-warning' %> 
+      
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,10 @@ Cocktail.destroy_all
 Dose.destroy_all
 Ingredient.destroy_all
 
+if Rails.env.development?
+  puts "Creating cocktails..."
+  cocktail = Cocktail.create!(name: "Caipirinha", img_url: "https://www.pingodoce.pt/wp-content/uploads/2016/07/comofazercaipirinha6.jpg")
+end
 
 puts "Creating ingredients..."
 
@@ -22,9 +26,8 @@ end
 
 puts "Ingredients are seeded"
 
-puts "Creating cocktails..."
 
-caipirinha = Cocktail.create!(name: "Caipirinha", img_url: "https://www.pingodoce.pt/wp-content/uploads/2016/07/comofazercaipirinha6.jpg")
+
 
 puts "Cocktails are seeded"
 

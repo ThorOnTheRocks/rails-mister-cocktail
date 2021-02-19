@@ -7,7 +7,7 @@ body {
 
 .search-bar {
     
-    position: absolute;
+    position: relative;
 	top:0;
 	bottom: 0;
 	left: 0;
@@ -17,3 +17,30 @@ body {
     height: 40px;
 	
 }
+
+#container-search-main{
+    top: 20rem;
+    left: 40rem;
+}
+
+.btn-search {
+    position: absolute;
+    left: 32rem;
+    bottom: 1rem;
+
+
+}
+
+a {
+    color: orange;
+}
+
+
+
+
+.card-index {
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+

@@ -1,9 +1,22 @@
-<div class="search-bar">
-  <%= image_tag("//files.jf-cms.co.uk/cocktailmaker/media/logo-white.svg", width: '500')%>
+<div class="position-relative" >
+  <div class="row d-flex">
 
-  <div class="d-flex mt-4">
-      <input type="text" class="form-control mr-2" placeholder="Search your cocktails..." aria-label="City">
-      <%= link_to "Search", cocktails_path, class: "btn btn-info" %>
+      <div class="position-absolute top-50 start-50 translate-middle" id="container-search-main">
+      <%= image_tag("//files.jf-cms.co.uk/cocktailmaker/media/logo-white.svg", width: '500')%>
+          <%= simple_form_for :search do |f| %>
+          <%= f.input " ",  { placeholder: 'Search your cocktail...'}%>
+          <%= link_to "Search", cocktails_path(@cocktail), class: "btn btn-search btn-warning " %>  
+        <% end %>
+      </div>
   </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
