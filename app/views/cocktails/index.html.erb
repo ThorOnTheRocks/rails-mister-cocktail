@@ -1,0 +1,18 @@
+<% @cocktails.each do |cocktail| %>
+	<div class="container mt-5">
+			<div class="row row-cols-4">
+				<div class="card-group">
+					<div class="card">
+					<%= image_tag cocktail.img_url %>
+					<div class="card-body">
+						<h3><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h3>
+						<h5>(<%= cocktail.doses.count %> ingredients)</h5>
+					</div>
+					<div class="card-footer">
+						<small class="text-muted">Last updated 3 mins ago</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +12,21 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <%= link_to "Cocktail Maker", root_path, class: "navbar-brand" %>
+    
+    
+      <form class="d-flex">
+        <%= link_to "List all cocktails", cocktails_path, class: "btn btn-outline-warning mr-2" %>
+        <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-outline-success"  %>
+        
+      </form>
+
+  </nav>
+  
+      <%= yield %>
+      
+   
   </body>
 </html>
