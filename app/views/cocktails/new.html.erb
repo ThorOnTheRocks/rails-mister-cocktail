@@ -6,7 +6,7 @@
       
       <%= simple_form_for @cocktail do |f| %>
   
-        <%= f.input :img_url %>  
+        <%= f.input :photo, as: :file %> 
         <%= f.input :name %>
         <%= f.submit class: 'btn btn-warning' %> or
         <%= link_to 'Cancel', root_path, class: 'btn btn-warning' %> 

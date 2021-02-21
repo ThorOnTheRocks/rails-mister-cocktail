@@ -1,6 +1,6 @@
 
 <div class="card bg-dark text-white">
-  <%=image_tag @cocktail.img_url %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-img-overlay">
     <h2 class="card-title"><%= @cocktail.name %></h2>
     <p class="card-text"></p>
