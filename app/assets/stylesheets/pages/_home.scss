@@ -26,7 +26,7 @@ body {
 .btn-search {
     position: absolute;
     left: 32rem;
-    bottom: 1rem;
+    bottom: - 0.1rem;
 
 
 }
@@ -40,7 +40,8 @@ a {
 
 .card-index {
     margin-top: 20px;
-    max-width: 300px;
+    width: 300px;
+    height: 400px;
 }
 
 

@@ -4,12 +4,12 @@
     <div class="card-header" style="font-size: 30px; color: orange">Create your cocktail</div>
     <div class="card-body">
       
-      <%= simple_form_for :search do |f| %>
+      <%= simple_form_for @cocktail do |f| %>
   
         <%= f.input :img_url %>  
         <%= f.input :name %>
         <%= f.submit class: 'btn btn-warning' %> or
-        <%= link_to 'Cancel', cocktails_path, class: 'btn btn-warning' %> 
+        <%= link_to 'Cancel', root_path, class: 'btn btn-warning' %> 
         
       <% end %>
    

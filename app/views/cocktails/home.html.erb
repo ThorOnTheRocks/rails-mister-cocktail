@@ -3,13 +3,20 @@
 
       <div class="position-absolute top-50 start-50 translate-middle" id="container-search-main">
       <%= image_tag("//files.jf-cms.co.uk/cocktailmaker/media/logo-white.svg", width: '500')%>
-          <%= simple_form_for :search do |f| %>
-          <%= f.input " ",  { placeholder: 'Search your cocktail...'}%>
-          <%= link_to "Search", cocktails_path(@cocktail), class: "btn btn-search btn-warning " %>  
-        <% end %>
+      
+      <%= form_tag cocktails_path, method: :get do %>
+        
+        <%= text_field_tag :query, params[:query], class:"mt-2 p-1", style:"width: 500px" , placeholder: "Find your cocktail..." %>  
+        
+        <%= submit_tag "Search", class: "btn btn-search btn-warning", id: "query" %>
+        
+       
+      <% end %>
       </div>
   </div>
 </div>
+
+
 
 
 
