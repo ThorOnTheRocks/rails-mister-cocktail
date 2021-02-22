@@ -1,6 +1,8 @@
 
 <div class="card bg-dark text-white">
+<% if @cocktail.photo.attached?  %>
 <%= cl_image_tag @cocktail.photo.key, class: "fit-image" %>
+<% end %>
   
   <div class="card-img-overlay">
   
