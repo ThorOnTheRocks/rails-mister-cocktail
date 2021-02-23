@@ -14,7 +14,7 @@ Ingredient.destroy_all
 
 if Rails.env.development?
   puts "Creating cocktails..."
-  cocktail = Cocktail.create!(name: "Caipirinha", img_url: "https://www.pingodoce.pt/wp-content/uploads/2016/07/comofazercaipirinha6.jpg")
+  cocktail = Cocktail.create!(name: "Caipirinha")
 end
 
 puts "Creating ingredients..."
